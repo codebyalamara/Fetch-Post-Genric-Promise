@@ -1,0 +1,71 @@
+body{
+    background-color: #eef2f7;
+}
+
+.spinner{
+    position: fixed;
+    inset: 0;
+    background-color: rgba(255,255,255,.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+
+.post-card{
+    border: none;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 15px rgba(0,0,0,.12);
+    transition: .3s;
+    background-color: #fff;
+}
+
+.post-card:hover{
+    transform: translateY(-5px);
+}
+
+.post-card .card-header{
+    background: linear-gradient(135deg,#2563eb,#3b82f6);
+    color: #fff;
+    padding: 15px;
+}
+
+.post-card .card-body{
+    background-color: #ffffff;
+    color: #475569;
+}
+
+.post-card .card-footer{
+    background-color: #f8fafc;
+    border-top: 1px solid #e2e8f0;
+}
+
+.card-header h3{
+    margin: 0;
+    font-size: 18px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.card-body p{
+    margin: 0;
+    height: 75px;
+    overflow: hidden;
+    color: #64748b;
+}
+
+.btn-outline-info{
+    color: #2563eb;
+    border-color: #2563eb;
+}
+
+.btn-outline-info:hover{
+    background-color: #2563eb;
+    color: #fff;
+}
+
+.btn-outline-danger:hover{
+    color: #fff;
+}
