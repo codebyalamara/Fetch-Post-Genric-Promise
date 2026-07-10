@@ -168,10 +168,7 @@ function onPostAdd(eve) {
             createSingleCard(res);
             snackbar('Post created successfully', 'success');
             postForm.reset();
-
-            document.getElementById('postContainer').scrollIntoView({
-                behavior: 'smooth'
-            });
+            document.getElementById('postContainer')
         })
         .catch(err => {
             snackbar(err.message, 'error');
@@ -198,11 +195,13 @@ function onEdit(ele) {
             addPostBtn.classList.add('d-none');
             updatePostBtn.classList.remove('d-none');
 
-            postForm.scrollIntoView({
-                behavior: 'smooth'
-            });
+            window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
         })
-        .catch(err => {
+          
+        })
+        .catch(ervr => {
             snackbar(err.message, 'error');
         })
         .finally(() => {
@@ -240,13 +239,16 @@ function onPostUpdate() {
 
             addPostBtn.classList.remove('d-none');
             updatePostBtn.classList.add('d-none');
+               
+        col.scrollIntoView({
+            behavior: 'smooth',
+            block: 'center'
+        })
 
             postForm.reset();
             localStorage.removeItem('EDIT_ID');
 
-            document.getElementById('postContainer').scrollIntoView({
-                behavior: 'smooth'
-            });
+            document.getElementById('postContainer')
         })
         .catch(err => {
             snackbar(err.message, 'error');
